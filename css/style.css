@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0,22,50,255) !important;
+}
+
+.aqua{
+    color:rgba(128,140,153,255);
+}
+
+.bg-aqua{
+    background-color: rgba(207,244,252,255);
+}
+
+.border-radio{
+    border-radius: 5px;
+}
