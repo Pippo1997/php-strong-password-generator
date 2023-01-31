@@ -1,7 +1,7 @@
 <?php
 
     include __DIR__ .'/partials/functions.php';
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,7 @@
                     <div>Lunghezza password:</div>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
-                    <form action="./index.php" method="GET" class="d-flex aling-items-center gap-2">
+                    <form action="./myPage.php" method="GET" class="d-flex aling-items-center gap-2">
                         <input type="number" name="psw" placeholder="Inserisci la lunghezza della password che desideri">
                         <button class="btn btn-sm btn-primary" type="submit">Invia</button>
                         <button class="btn btn-sm btn-secondary" type="reset">Annulla</button>
