@@ -1,5 +1,16 @@
 <?php
 
+    function random_psw($length)
+    {
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"£$%&/()=?^*-"';
+        $password = array();
+        $size = strlen($chars);
+        for ($i = 0; $i < $length; $i++) {
+            $n = rand(0, $size - 1);
+            $password[] = $chars[$n];
+        }
+        return implode($password); 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +38,7 @@
         <div class="container">
             <div class="row bg-aqua border-radio">
                 <div class="col-12 py-2">
-                    <div class="text-primary-emphasis py-2">Nessun parametro inserito</div>
+                    <div class="text-primary-emphasis py-2"><?php echo random_psw($_GET['psw']) ?></div>
                 </div>
             </div>
         </div>
@@ -38,7 +49,7 @@
                 </div>
                 <div class="col-6 d-flex justify-content-end">
                     <form action="./index.php" method="GET" class="d-flex aling-items-center gap-2">
-                        <input type="number">
+                        <input type="number" name="psw" placeholder="Inserisci la lunghezza della password che desideri">
                         <button class="btn btn-sm btn-primary" type="submit">Invia</button>
                         <button class="btn btn-sm btn-secondary" type="reset">Annulla</button>
                     </form>

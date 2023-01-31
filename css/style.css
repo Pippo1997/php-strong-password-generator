@@ -19,3 +19,7 @@ body{
 .border-radio{
     border-radius: 5px;
 }
+
+input{
+    width: 500px;
+}
